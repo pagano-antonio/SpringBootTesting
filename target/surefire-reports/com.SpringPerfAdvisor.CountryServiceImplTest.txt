@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: com.SpringPerfAdvisor.CountryServiceImplTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.402 s <<< FAILURE! -- in com.SpringPerfAdvisor.CountryServiceImplTest
+com.SpringPerfAdvisor.CountryServiceImplTest.givenCountryInDb_whenFindCountryById_thenReturnCountry -- Time elapsed: 0.010 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.SpringPerfAdvisor.Country.getId()" because "this.italy" is null
+	at com.SpringPerfAdvisor.CountryServiceImplTest.givenCountryInDb_whenFindCountryById_thenReturnCountry(CountryServiceImplTest2.java:57)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+

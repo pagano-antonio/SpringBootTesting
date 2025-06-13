@@ -32,6 +32,11 @@ public class Country {
 		this.countryName = countryName;
 		this.population = population;
 	}
+	public Country(String countryName, long population) {
+		super();
+		this.countryName = countryName;
+		this.population = population;
+	}
 
 	public int getId() {
 		return id;
