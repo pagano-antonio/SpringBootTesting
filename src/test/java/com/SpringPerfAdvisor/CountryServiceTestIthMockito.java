@@ -24,7 +24,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 // Use MockitoExtension for JUnit 5 to enable Mockito annotations
 @ExtendWith(MockitoExtension.class)
-public class CountryServiceTest {
+public class CountryServiceTestIthMockito {
 	// InjectMocks automatically injects the mocked dependencies into this instance
     @InjectMocks
     private CountryServiceImpl countryService;

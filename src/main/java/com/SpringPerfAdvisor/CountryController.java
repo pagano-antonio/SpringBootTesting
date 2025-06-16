@@ -26,7 +26,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 @RestController
 @RequestMapping("/api")
-public class HelloController {
+public class CountryController {
 	
 	 // Inietta l'interfaccia del servizio, Spring troverà l'implementazione CountryServiceImpl
     @Autowired
