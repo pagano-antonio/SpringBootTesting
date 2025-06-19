@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -32,6 +33,11 @@ public class CountryController {
     @Autowired
     private CountryService countryService; // Ora inietta CountryService
 
+    
+    
+    @Value("${country.limit}")
+    private int countryLimit;
+    
     // ------------------- Ricerca Per ID ------------------------------------
     @RequestMapping(value = "/cercaid/{countryId}", method = RequestMethod.GET, produces = "application/json")
     public ResponseEntity<Optional<Country>> ricercaPerId(@PathVariable("countryId") Integer countryId) {
@@ -45,6 +51,7 @@ public class CountryController {
     public ResponseEntity<List<Country>> ricercaPerNome(@PathVariable("countryName") String countryName) {
         System.out.println("****** dentro *******");
         System.out.println("countryName:" + countryName);
+        System.out.println("countryLimit:" + countryLimit);
         // Chiama il metodo del servizio
         List<Country> res = countryService.findCountriesByName(countryName);
         return new ResponseEntity<>(res, HttpStatus.OK);
